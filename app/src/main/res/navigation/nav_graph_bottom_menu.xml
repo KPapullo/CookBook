@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_bottom_menu"
+    app:startDestination="@id/feedFragment3">
+
+    <fragment
+        android:id="@+id/feedFragment3"
+        android:name="ru.netology.cookbook.cookbook.activity.FeedFragment"
+        android:label="FeedFragment">
+        <action
+            android:id="@+id/action_feedFragment3_to_nav_graph_create_recipe3"
+            app:destination="@id/nav_graph_create_recipe" />
+        <action
+            android:id="@+id/action_feedFragment3_to_recipeViewFragment"
+            app:destination="@id/recipeViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filterFragmentSwitch"
+        android:name="ru.netology.cookbook.cookbook.activity.FilterFragment"
+        android:label="FilterFragmentSwitch" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="ru.netology.cookbook.cookbook.activity.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_nav_graph_create_recipe"
+            app:destination="@id/nav_graph_create_recipe" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_recipeViewFragment"
+            app:destination="@id/recipeViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomFragment2"
+        android:name="ru.netology.cookbook.cookbook.activity.BottomFragment"
+        android:label="BottomFragment" />
+    <include app:graph="@navigation/nav_graph_create_recipe" />
+    <fragment
+        android:id="@+id/recipeViewFragment"
+        android:name="ru.netology.cookbook.cookbook.activity.RecipeViewFragment"
+        android:label="RecipeViewFragment" />
+
+</navigation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_create_recipe"
+    app:startDestination="@id/recipeCreateFragment2">
+
+    <fragment
+        android:id="@+id/recipeCreateFragment2"
+        android:name="ru.netology.cookbook.cookbook.activity.RecipeCreateFragment"
+        android:label="RecipeCreateFragment" >
+        <action
+            android:id="@+id/action_recipeCreateFragment2_to_filterSetupFragment"
+            app:destination="@id/filterSetupFragment" />
+        <action
+            android:id="@+id/action_recipeCreateFragment2_to_stageCreateFragment"
+            app:destination="@id/stageCreateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterSetupFragment"
+        android:name="ru.netology.cookbook.cookbook.activity.FilterSetupFragment"
+        android:label="FilterSetupFragment" >
+        <action
+            android:id="@+id/action_filterSetupFragment_to_recipeCreateFragment2"
+            app:destination="@id/recipeCreateFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/stageCreateFragment"
+        android:name="ru.netology.cookbook.cookbook.activity.StageCreateFragment"
+        android:label="StageCreateFragment" />
+</navigation>
