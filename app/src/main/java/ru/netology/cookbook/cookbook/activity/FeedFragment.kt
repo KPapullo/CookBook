@@ -1,6 +1,7 @@
 package ru.netology.cookbook.cookbook.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
@@ -112,7 +113,11 @@ private var simpleCallback =
             viewHolder: RecyclerView.ViewHolder,
             target: RecyclerView.ViewHolder
         ): Boolean {
-
+            val startPosition = viewHolder.layoutPosition
+            val endPosition = target.layoutPosition
+            Log.e("AAA start", startPosition.toString())
+            Log.e("AAA send", endPosition.toString())
+            recyclerView.adapter?.notifyItemMoved(startPosition, endPosition)
             return true
         }
 
